@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#e7dcc6" />
+    <title>Radha — Hello, I Am</title>
+    <meta
+      name="description"
+      content="A little corner of the internet. Knitwear designer, chronic Pinterest scroller, and someone always working on at least three ideas at once."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Patrick+Hand&family=Shadows+Into+Light&family=Gloria+Hallelujah&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Boarding / loading screen -->
+    <div id="loader" class="loader" aria-hidden="true">
+      <div class="loader__inner">
+        <div class="loader__board">
+          <span class="loader__dot"></span>
+          <span class="loader__dot"></span>
+          <span class="loader__dot"></span>
+        </div>
+        <p class="loader__text">boarding the local…</p>
+      </div>
+    </div>
+
+    <!-- Now-playing chip: a little nod to "me, my headphones & my playlist" -->
+    <div class="now-playing" aria-hidden="true">
+      <span class="now-playing__icon">♫</span>
+      <span class="now-playing__marquee">
+        <span>now playing — my playlist&nbsp;&nbsp;•&nbsp;&nbsp;just me, my headphones &amp; the whole world&nbsp;&nbsp;•&nbsp;&nbsp;</span>
+        <span>now playing — my playlist&nbsp;&nbsp;•&nbsp;&nbsp;just me, my headphones &amp; the whole world&nbsp;&nbsp;•&nbsp;&nbsp;</span>
+      </span>
+    </div>
+
+    <!-- The fixed stage where the story plays out -->
+    <main id="stage" class="stage">
+      <!-- PAGE 1 — Landing: the name tag -->
+      <section id="panel-landing" class="panel panel--landing" data-panel="1">
+        <div class="paper-grain" aria-hidden="true"></div>
+        <p class="landing__eyebrow">hello, my name is…</p>
+        <img
+          class="tag-hero"
+          src="/sketches/tag.jpg"
+          alt="An embroidered name tag patch reading 'HELLO, I AM Radha'."
+        />
+        <h1 class="landing__name">Radha</h1>
+        <div class="scroll-hint">
+          <span>scroll</span>
+          <span class="scroll-hint__arrow">↓</span>
+        </div>
+      </section>
+
+      <!-- PAGE 2 — Portrait: from Thane to Navi Mumbai -->
+      <section id="panel-portrait" class="panel panel--portrait" data-panel="2">
+        <img
+          class="art art--portrait"
+          src="/sketches/portrait.jpg"
+          alt="A sketch of Radha in a white tee with the name tag on her chest, brown headphones, a tote bag, one hand raised holding a train handle. Notes read 'I'm from Thane' with a little house, and 'I'm from Navi Mumbai — NIFT Mumbai (spent more time here than at home...)'."
+        />
+      </section>
+
+      <!-- PAGE 3 — The daily rush + bio -->
+      <section id="panel-train" class="panel panel--train" data-panel="3">
+        <img
+          class="art art--train"
+          src="/sketches/train-rush.jpg"
+          alt="A zoomed-out sketch of the Mumbai local train rush, Radha highlighted in the crowd."
+        />
+        <aside class="bio-box">
+          <p>
+            Knitwear designer, chronic Pinterest scroller, and someone who's
+            always working on at least three ideas at once. I like creating
+            things that make people feel something.
+          </p>
+          <p class="bio-box__welcome">
+            Welcome to my little corner of the internet!
+          </p>
+        </aside>
+      </section>
+
+      <!-- PAGE 4 — Likes: the spilled tote -->
+      <section id="panel-likes" class="panel panel--likes" data-panel="4">
+        <h2 class="section-heading section-heading--likes">Likes</h2>
+        <div
+          class="shock-face"
+          aria-hidden="true"
+          style="background-image: url('/sketches/train-rush.jpg')"
+        ></div>
+        <img
+          class="art art--tote"
+          src="/sketches/tote.png"
+          alt="Radha's tote bag fallen open on the train floor between people's legs, spilling yarn and a crochet hook, a phone playing Apple Music, a packet of Chupa Chups, and a crumpled paper ball. Labels: crochet, my playlist, eating Chupa Chups."
+        />
+      </section>
+
+      <!-- PAGE 5 — Dislikes: the crumpled paper opens -->
+      <section id="panel-dislikes" class="panel panel--dislikes" data-panel="5">
+        <img
+          class="art art--dislikes"
+          src="/sketches/dislikes.png"
+          alt="A crumpled paper opened in two hands. Handwritten heading 'Dislikes' with a list: anything to do with numbers or maths, cold climate, living alone."
+        />
+      </section>
+
+      <!-- PAGE 6 — Next stop -->
+      <section id="panel-nextstop" class="panel panel--nextstop" data-panel="6">
+        <div class="train-display">
+          <div class="train-display__rail" aria-hidden="true"></div>
+          <div class="train-display__board">
+            <div class="train-display__row">
+              <span class="train-display__label">NEXT STOP</span>
+              <span class="train-display__time" data-clock>--:--</span>
+            </div>
+            <div class="train-display__screen">
+              <span class="train-display__station">Bhubaneswar</span>
+            </div>
+            <div class="train-display__ticker">
+              <span>
+                ☻ thank you for travelling with me &nbsp;•&nbsp; mind the gap
+                &nbsp;•&nbsp; doors open on the side of curiosity &nbsp;•&nbsp;
+                say hi → <a href="mailto:hello@example.com">hello@example.com</a>
+                &nbsp;•&nbsp; <a href="#" data-placeholder>instagram</a>
+                &nbsp;•&nbsp; <a href="#" data-placeholder>behance</a>
+                &nbsp;•&nbsp;
+              </span>
+            </div>
+          </div>
+          <p class="train-display__caption">— the journey continues —</p>
+        </div>
+      </section>
+    </main>
+
+    <!-- Bottom route map / scroll progress -->
+    <nav class="route" aria-label="Journey progress">
+      <div class="route__line">
+        <div class="route__fill"></div>
+      </div>
+      <ol class="route__stops">
+        <li class="route__stop" data-stop="0"><span>Hello</span></li>
+        <li class="route__stop" data-stop="1"><span>Thane</span></li>
+        <li class="route__stop" data-stop="2"><span>The Rush</span></li>
+        <li class="route__stop" data-stop="3"><span>Likes</span></li>
+        <li class="route__stop" data-stop="4"><span>Dislikes</span></li>
+        <li class="route__stop" data-stop="5"><span>Bhubaneswar</span></li>
+      </ol>
+    </nav>
+
+    <!-- The tall, empty spacer that drives the scrubbed story -->
+    <div id="scroll-track" class="scroll-track" aria-hidden="true"></div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
