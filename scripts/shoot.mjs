@@ -24,7 +24,7 @@ const maxScroll = await page.evaluate(
   () => document.documentElement.scrollHeight - window.innerHeight
 );
 
-const points = [0, 0.13, 0.24, 0.4, 0.5, 0.62, 0.72, 0.8, 0.9, 1];
+const points = [0, 0.13, 0.24, 0.4, 0.46, 0.49, 0.56, 0.62, 0.72, 0.8, 0.9, 1];
 for (let i = 0; i < points.length; i += 1) {
   const p = points[i];
   await page.evaluate((y) => window.scrollTo(0, y), Math.round(maxScroll * p));
