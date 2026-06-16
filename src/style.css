@@ -82,17 +82,29 @@ a {
   overflow: hidden;
 }
 
-/* Sketch art: drop the white paper of the scans onto our warm paper bg. */
+/* Sketch art: full-bleed, with the scans' white paper dropped onto our warm bg. */
 .art {
-  max-width: min(96vw, 1100px);
-  max-height: 92vh;
-  width: auto;
-  height: auto;
-  object-fit: contain;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   mix-blend-mode: multiply;
   filter: contrast(1.04) saturate(1.05);
   user-select: none;
   -webkit-user-drag: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 /* =========================== Page 1 — Landing ========================== */
@@ -118,31 +130,12 @@ a {
     );
 }
 
-.landing__eyebrow {
-  font-family: var(--font-scribble);
-  font-size: clamp(1.1rem, 3.2vw, 2rem);
-  color: var(--ink-soft);
-  transform: rotate(-3deg);
-  letter-spacing: 0.5px;
-}
-
 .tag-hero {
-  width: clamp(280px, 52vw, 640px);
+  width: clamp(300px, 62vw, 820px);
   height: auto;
-  mix-blend-mode: multiply;
   transform: rotate(-2deg);
-  filter: drop-shadow(6px 10px 0 rgba(42, 39, 35, 0.12));
+  filter: drop-shadow(8px 12px 10px rgba(42, 39, 35, 0.22));
   will-change: transform, opacity;
-}
-
-.landing__name {
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: clamp(4rem, 18vw, 16rem);
-  line-height: 0.8;
-  color: var(--ink);
-  transform: rotate(-2deg);
-  text-shadow: 3px 4px 0 rgba(197, 53, 44, 0.18);
 }
 
 .scroll-hint {

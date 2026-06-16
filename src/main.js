@@ -108,11 +108,7 @@ function buildStory() {
   // A. Landing -> Portrait (the tag zooms out onto the chest) --------------
   tl.addLabel('toPortrait')
     .to('.tag-hero', { scale: 0.13, y: '7vh', rotation: -8, duration: 1.4 }, 'toPortrait')
-    .to(
-      ['.landing__name', '.landing__eyebrow', '.scroll-hint'],
-      { opacity: 0, y: -30, duration: 0.5 },
-      'toPortrait'
-    )
+    .to('.scroll-hint', { opacity: 0, y: -30, duration: 0.5 }, 'toPortrait')
     .to('.paper-grain', { opacity: 0, duration: 0.6 }, 'toPortrait')
     .to('#panel-portrait', { opacity: 1, duration: 0.8 }, 'toPortrait+=0.5')
     .to('.art--portrait', { scale: 1, duration: 1.2, ease: 'power2.out' }, 'toPortrait+=0.5')
@@ -173,7 +169,7 @@ function buildStory() {
    ------------------------------------------------------------------------- */
 
 const SKETCHES = [
-  '/sketches/tag.jpg',
+  '/sketches/tag.png',
   '/sketches/portrait.jpg',
   '/sketches/train-rush.jpg',
   '/sketches/tote.png',
