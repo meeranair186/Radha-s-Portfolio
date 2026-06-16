@@ -1,0 +1,23 @@
+{
+  "name": "radha-portfolio",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "A scrollytelling portfolio for Radha — a Mumbai local-train journey of curated chaos.",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview --port 4173"
+  },
+  "engines": {
+    "node": ">=24",
+    "npm": ">=11"
+  },
+  "dependencies": {
+    "gsap": "^3.12.5"
+  },
+  "devDependencies": {
+    "puppeteer-core": "^23.11.1",
+    "vite": "^6.0.0"
+  }
+}
