@@ -170,8 +170,9 @@ function buildStory() {
 
 const SKETCHES = [
   '/sketches/tag.png',
-  '/sketches/portrait.jpg',
-  '/sketches/train-rush.jpg',
+  '/sketches/portrait.png',
+  '/sketches/train-rush.png',
+  '/sketches/shock.png',
   '/sketches/tote.png',
   '/sketches/dislikes.png',
 ];
